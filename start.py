@@ -1,3 +1,4 @@
+import sys
 import pygame
 import random
 import os
@@ -57,9 +58,9 @@ def update_player():
 
 def update_opponent():
     if opponent_rect.centery < ball_rect.centery:
-        opponent_rect.centery += 5
+        opponent_rect.centery += 3
     if opponent_rect.centery > ball_rect.centery:
-        opponent_rect.centery -= 5
+        opponent_rect.centery -= 3
     if opponent_rect.top < 0:
         opponent_rect.top = 0
     if opponent_rect.bottom > HEIGHT:
